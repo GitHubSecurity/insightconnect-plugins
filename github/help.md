@@ -259,6 +259,43 @@ Example output:
 
 ```
 
+### Create Issue Comment
+
+This action is used to comment on an issue.
+
+#### Input
+
+|Name|Type|Default|Required|Description|Enum|
+|----|----|-------|--------|-----------|----|
+|body|string|None|True|Body text of issue|None|
+|issue_number|number|None|True|Issue number|None|
+|repository|string|None|True|Repository to post issue|None|
+|organization|string|None|False|Organizational owner of repository|None|
+
+#### Output
+
+|Name|Type|Required|Description|
+|----|----|--------|-----------|
+|url|string|False|None|
+
+### Close Issue
+
+This action is used to close an issue.
+
+#### Input
+
+|Name|Type|Default|Required|Description|Enum|
+|----|----|-------|--------|-----------|----|
+|issue_number|number|None|True|Issue number|None|
+|repository|string|None|True|Repository to post issue|None|
+|organization|string|None|False|Organizational owner of repository|None|
+
+#### Output
+
+|Name|Type|Required|Description|
+|----|----|--------|-----------|
+|url|string|False|None|
+
 ### Get User
 
 This action is used to retrieve information about a GitHub user.

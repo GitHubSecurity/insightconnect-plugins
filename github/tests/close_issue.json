@@ -1,0 +1,20 @@
+{
+  "body": {
+    "action": "close_issue",
+    "input": {
+      "issue_number": "1",
+      "repository": "plugin-dev-env",
+      "organization": "komand",
+      "assignee": "nathanielltaylor",
+    },
+    "connection": {
+      "credentials": {
+        "password": "",
+        "username": ""
+      }
+    },
+    "meta": {}
+  },
+  "version": "v1",
+  "type": "action_start"
+}

@@ -1,0 +1,20 @@
+{
+  "body": {
+    "action": "create_issue_comment",
+    "input": {
+      "issue_number": "1",
+      "body": "hello this is a issue comment",
+      "repository": "plugin-dev-env",
+      "organization": "komand",
+    },
+    "connection": {
+      "credentials": {
+        "password": "",
+        "username": ""
+      }
+    },
+    "meta": {}
+  },
+  "version": "v1",
+  "type": "action_start"
+}
