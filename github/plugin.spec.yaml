@@ -1190,6 +1190,32 @@ actions:
         description: URL
         type: string
         required: false
+  add_issue_label:
+    title: Add Issue Label
+    description: Adds Label to an Issue
+    input:
+      repository:
+        type: string
+        description: Repository to post issue
+        required: true
+      organization:
+        type: string
+        description: Organizational owner of repository
+        required: false
+      issue_number:
+        type: number
+        description: issue number
+        required: true
+      label:
+        type: string
+        description: issue label
+        required: true
+    output:
+      url:
+        title: URL
+        description: URL
+        type: string
+        required: false
   user:
     title: Get User
     description: Get user information

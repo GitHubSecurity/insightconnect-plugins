@@ -1,16 +1,16 @@
 import komand
 import github
-from .schema import CloseIssueInput, CloseIssueOutput
+from .schema import AddIssueLabelInput, AddIssueLabelOutput
 
 
 
-class CloseIssue(komand.Action):
+class AddIssueLabel(komand.Action):
   def __init__(self):
       super(self.__class__, self).__init__(
-              name='close_issue',
-              description='Closes an Issues',
-              input=CloseIssueInput(),
-              output=CloseIssueOutput())
+              name='add_issue_label',
+              description='Adds label to issue',
+              input=AddIssueLabelInput(),
+              output=AddIssueLabelOutput())
 
 
   def run(self, params={}):
@@ -21,8 +21,8 @@ class CloseIssue(komand.Action):
       g = self.connection.user
       issue = g.get_repo(params.get('repository')).get_issue(int(params.get('issue_number')))
 
-    issue_params = {"state": "closed"}
+    issue_params = params.get("label")
 
-    issue = issue.edit(**issue_params)
+    issue = issue.add_to_labels(issue_params)
 
     return {'url': 'blank'}

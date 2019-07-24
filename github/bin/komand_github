@@ -25,6 +25,8 @@ class ICONGithub(komand.Plugin):
 
         self.add_action(actions.AddMembership())
 
+        self.add_action(actions.AddIssueLabel())
+
         self.add_action(actions.BlockUser())
 
         self.add_action(actions.CloseIssue())
